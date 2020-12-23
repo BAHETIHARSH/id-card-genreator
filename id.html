@@ -1,0 +1,106 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+    @page {
+    /* dimensions for the whole page */
+    size: 90mm 56mm;
+
+    margin: 0;
+}
+
+html {
+    /* off-white, so body edge is visible in browser */
+    background: #eee;
+}
+
+body {
+    height: 56mm;
+    width: 90mm;
+
+    margin: 0;
+}
+#BARCODE {
+  z-index: 11;
+  width: 7cm;
+  height: 0.8cm;
+  position: fixed;
+  top: 0;
+  margin-top: 41mm;
+  margin-left: 3mm;
+
+}
+/* fill half the height with each face */
+.face {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/* an image that fills the whole of the front face */
+.face-front img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+#infoi {
+    width: 50mm;
+    height: 35mm;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    margin-left: -12.5mm;
+    margin-top: -0.8mm;
+  }
+#infoi {
+    z-index: 10;
+  }
+#info {
+    width: 69mm;
+    height: 50mm;
+    position: fixed;
+    top: 0;
+    text-align: right;
+    margin-top: 15mm;
+  }
+#info {
+    z-index: 09;
+  }
+#infoi img {
+    position: relative;
+    margin-left: 7.8mm;
+    margin-top: 5.7mm;
+
+
+}
+</style>
+<body>
+<div class="face face-front"><img src="C:\Users\Studio\PycharmProjects\id_card_genreator\front.png"></div>
+<!--<div id="infoi"><img src="@picture" height="89.5" width="83"/>-->
+    <div style="margin-left: 1.3cm;margin-top: -0.6cm;">
+        <br>
+        <div style="font-size: 0.7em;margin-top: 5%;font-family: sans-serif;color: aliceblue;text-transform: uppercase;">
+            <b>{fname}</b> {lname}
+        </div>
+        <br>
+        <div style="font-size: 0.7em;margin-top: -0.4cm;font-family: sans-serif;color: aliceblue;text-t ransform: capitalize;">
+            @function
+        </div>
+    </div>
+<div id="info">
+    <br>
+    <div style="font-size: 0.7em;margin-top: 0.6%;font-family: sans-serif;text-transform: uppercase;">$code</div>
+    <br>
+    <div style="font-size: 0.7em;margin-top: -0.6%;font-family: sans-serif;text-transform: capitalize;">{date_of_birth}
+    </div>
+    <br>
+    <div style="font-size: 0.7em;margin-top: -0.6%;font-family: sans-serif;text-transform: capitalize;">
+        {expiration_date}
+    </div>
+</div>
+<!--<div id="BARCODE"><img src="../RES/bar.PNG" height="20" width="120"/></div>-->
+
+</body>

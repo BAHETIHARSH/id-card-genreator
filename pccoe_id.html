@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pccoe_id</title>
+    <style>
+            html {
+    /* off-white, so body edge is visible in browser */
+    background: #eee;
+}
+
+body {
+    height: 56mm;
+    width: 90mm;
+
+    margin: 0;
+}
+
+/* fill half the height with each face */
+.face {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/* an image that fills the whole of the front face */
+.face-front img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index:-1;
+}
+#name{
+    position: absolute;
+    left: 115px;
+    top: 56px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="face face-front" style="z-index:-1;"><img src="c:\Users\Studio\PycharmProjects\id_card_genreator\front2.png"></div>
+    
+    <div class="photo"><img src="c:\Users\Studio\PycharmProjects\id_card_genreator\photo.jpg" style="height: 83px;position: absolute;top: 75px;left: 10px;border: 1px solid #000;"></div>
+    <div class="barcode"><img src="c:\Users\Studio\PycharmProjects\id_card_genreator\download.png" style="height: 32px;position: absolute;top: 169px;left: 18px;"></div>
+    <p id="name">Name:Harsh Baheti<br>
+        Id :1339769 <br>
+        Branch:Computer Science<br>
+        Dob:22/09/2001<br>
+        Blood Group:AB+
+    </p>
+</body>
+</html>
